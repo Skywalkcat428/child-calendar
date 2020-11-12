@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: child_calendar_production
-  parentname: child_calendar
+  username: child_calendar
   password: <%= ENV['CHILD_CALENDAR_DATABASE_PASSWORD'] %>

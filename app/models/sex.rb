@@ -7,6 +7,6 @@ class Sex < ActiveHash::Base
   ]
 
   include ActiveHash::Associations
-  has_many :parent
+  has_many :user
 
 end

@@ -1,0 +1,98 @@
+// Place all the styles related to the calendar controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.wrapper {
+  display: flex;
+}
+
+.side {
+  background-color: #f7e75c;
+  width: 150px;
+  height: 100vh;
+}
+
+.side-header {
+  height: 50px;
+  padding: 0 20px;
+  background-color: #f7e75c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-name a{
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+}
+
+.children {
+  background-color: #fcca41;
+  height: calc(100vh - 100px);
+  padding: 0 20px;
+  overflow: scroll;
+}
+
+.child {
+  padding: 20px 0 40px;
+}
+
+.child-name a {
+  text-decoration: none;
+  color: black;
+}
+
+.side-footer {
+  background-color: #abfc41;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-calendar {
+  font-size: 10px;
+}
+
+.create-calendar a {
+  border: 1px solid black;
+  padding: 14px;
+  color: black;
+  text-decoration: none;
+}
+
+.main {
+  background-color: #ffffff;
+  width: calc(100% - 150px);
+}
+
+.calendar-header {
+  background-color: antiquewhite;
+  height: 50px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-title {
+  color: #333;
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.header-button {
+  margin-top: 13px;
+}
+
+.header-button a {
+  text-decoration: none;
+  border: 1px solid darkred;
+  color: darkred;
+  padding: 10px;
+}
+
+.schedule {
+  background-color: #FAFAFA;
+  height: calc(100vh - 50px);
+}
