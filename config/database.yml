@@ -13,7 +13,7 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  parentname: root
+  username: root
   password:
   socket: /tmp/mysql.sock
 
@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: child_calendar_production
-  parentname: child_calendar
+  username: child_calendar
   password: <%= ENV['CHILD_CALENDAR_DATABASE_PASSWORD'] %>

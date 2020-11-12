@@ -31,7 +31,7 @@
 
 ### Association
 
-- belongs_to :parent
+- belongs_to :user
 - belongs_to :calendar
 
 - has_many   :schedules
