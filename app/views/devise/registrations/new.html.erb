@@ -4,7 +4,7 @@
       <h2>Create Account</h2>
       <h5>新規アカウントの作成</h5>
     </div>
-    <div class='account-page__inner--right parent-form'>
+    <div class='account-page__inner--right user-form'>
       <%= form_with model: resource, as: resource_name, url: registration_path(resource_name), local: true do |f|%>
         <%= devise_error_messages!%>
         <div class='field'>
@@ -26,7 +26,7 @@
         <div class='field'>
           <div class='field-label'>
             <%= f.label :password%>
-            <i>(英数字8文字以上)</i>
+            <i>(英数字6文字以上)</i>
           </div>
           <div class='field-input'>
             <%= f.password_field :password, autocomplete: "off"%>

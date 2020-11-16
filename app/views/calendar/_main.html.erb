@@ -1,0 +1,19 @@
+<div class="calendar-header"> <%#chat-header%>
+  <div class="left-header">
+    <div class="header-name">
+      <%= link_to current_user.name, edit_user_path(current_user) %> さんのカレンダー
+    </div>
+  </div>
+  
+  <div class="right-header">
+    <div class="header-button">
+      <a href="#">チャットルーム</a>
+    </div>
+    <div class="header-button">
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'%>
+    </div>
+  </div>
+</div>
+
+<div class="event"> <%#messages%>
+</div>
