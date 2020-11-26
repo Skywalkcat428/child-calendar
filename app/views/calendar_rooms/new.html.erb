@@ -6,7 +6,7 @@
         <%= f.label :お子さんのお名前, class: 'calendar-room-form__label'%>
       </div>
       <div class='calendar-room-form__field--right'>
-        <%= f.text_field :child_name, class: 'calendar__room_name calendar-room-form__input', placeholder: 'チャットルーム名を入力してください'%>
+        <%= f.text_field :child_name, class: 'calendar__room_name calendar-room-form__input', placeholder: 'お子さんのお名前を入力してください'%>
       </div>
     </div>
     <div class='calendar-room-form__field'>
@@ -17,7 +17,7 @@
         <%= f.label :誕生日, class: 'calendar-room-form__label'%>
       </div>
       <div class='calendar-room-form__field--right'>
-        <%= f.text_field :child_name, class: 'calendar__room_name calendar-room-form__input', placeholder: 'チャットルーム名を入力してください'%>
+        <%= f.text_field :child_name, class: 'calendar__room_name calendar-room-form__input', placeholder: '誕生日を入力してください'%>
       </div>
     </div>
     <div class='calendar-room-form__field'>
@@ -28,7 +28,7 @@
         <%= f.label :性別, class: 'calendar-room-form__label'%>
       </div>
       <div class='calendar-room-form__field--right'>
-        <%= f.text_field :child_name, class: 'calendar__room_name calendar-room-form__input', placeholder: 'チャットルーム名を入力してください'%>
+        <%= f.text_field :child_name, class: 'calendar__room_name calendar-room-form__input', placeholder: '性別を入力してください'%>
       </div>
     </div>
     <div class='calendar-room-form__field'>
@@ -39,7 +39,7 @@
         <%= f.label :血液型, class: 'calendar-room-form__label'%>
       </div>
       <div class='calendar-room-form__field--right'>
-        <%= f.text_field :child_name, class: 'calendar__room_name calendar-room-form__input', placeholder: 'チャットルーム名を入力してください'%>
+        <%= f.text_field :child_name, class: 'calendar__room_name calendar-room-form__input', placeholder: '血液型を入力してください'%>
       </div>
     </div>
     <div class='calendar-room-form__field'>
@@ -47,11 +47,11 @@
 
     <div class='calendar-room-form__field'>
       <div class='calendar-room-form__field--left'>
-        <label class='calendar-room-form__label' for='calendar_room_チャットメンバー'>チャットメンバー</label>
+        <label class='calendar-room-form__label' for='calendar_room_カレンダー'>カレンダー</label>
       </div>
       <div class='calendar-room-form__field--right'>
         <select name="room[user_ids][]">
-          <option value="">チャットするユーザーを選択してください</option>
+          <option value="">カレンダーを選択してください</option>
           <% User.where.not(id: current_user.id).each do |user| %>
             <option value=<%= user.id %>><%= user.name %></option>
           <% end %>
