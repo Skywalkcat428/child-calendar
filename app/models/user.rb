@@ -12,6 +12,8 @@ class User < ApplicationRecord
 
   validates :name, presence: true
 
-  has_many :calendars
+  has_many :calendar_rooms
   # has_many :events
+  has_many :room_users
+  has_many :chat_rooms, through: :room_users
 end

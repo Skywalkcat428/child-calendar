@@ -17,7 +17,7 @@
         <%= f.label :誕生日, class: 'calendar-room-form__label'%>
       </div>
       <div class='calendar-room-form__field--right'>
-        <%= f.text_field :child_name, class: 'calendar__room_name calendar-room-form__input', placeholder: '誕生日を入力してください'%>
+        <%= f.text_field :birth_date, class: 'calendar__room_name calendar-room-form__input', placeholder: '誕生日を入力してください'%>
       </div>
     </div>
     <div class='calendar-room-form__field'>
@@ -28,7 +28,7 @@
         <%= f.label :性別, class: 'calendar-room-form__label'%>
       </div>
       <div class='calendar-room-form__field--right'>
-        <%= f.text_field :child_name, class: 'calendar__room_name calendar-room-form__input', placeholder: '性別を入力してください'%>
+        <%= f.text_field :sex, class: 'calendar__room_name calendar-room-form__input', placeholder: '性別を入力してください'%>
       </div>
     </div>
     <div class='calendar-room-form__field'>
@@ -39,7 +39,7 @@
         <%= f.label :血液型, class: 'calendar-room-form__label'%>
       </div>
       <div class='calendar-room-form__field--right'>
-        <%= f.text_field :child_name, class: 'calendar__room_name calendar-room-form__input', placeholder: '血液型を入力してください'%>
+        <%= f.text_field :blood_type, class: 'calendar__room_name calendar-room-form__input', placeholder: '血液型を入力してください'%>
       </div>
     </div>
     <div class='calendar-room-form__field'>
@@ -55,7 +55,7 @@
           <% User.where.not(id: current_user.id).each do |user| %>
             <option value=<%= user.id %>><%= user.name %></option>
           <% end %>
-        </select>
+        </select> 
         <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
       </div>
     </div>
