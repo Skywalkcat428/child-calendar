@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_26_065313) do
+ActiveRecord::Schema.define(version: 2020_11_30_010034) do
 
   create_table "calendar_rooms", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "child_name", null: false
@@ -40,6 +40,16 @@ ActiveRecord::Schema.define(version: 2020_11_26_065313) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "content"
+    t.bigint "chat_room_id"
+    t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["chat_room_id"], name: "index_messages_on_chat_room_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
+  end
+
   create_table "room_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "chat_room_id"
     t.bigint "user_id"
@@ -63,6 +73,8 @@ ActiveRecord::Schema.define(version: 2020_11_26_065313) do
   end
 
   add_foreign_key "calendar_rooms", "users"
+  add_foreign_key "messages", "chat_rooms"
+  add_foreign_key "messages", "users"
   add_foreign_key "room_users", "chat_rooms"
   add_foreign_key "room_users", "users"
 end

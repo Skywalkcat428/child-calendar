@@ -1,14 +1,10 @@
-// Place all the styles related to the calendar controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 .wrapper {
   display: flex;
 }
 
 .side {
   background-color: #f7e75c;
-  width: 200px;
+  width: 250px;
   height: 100vh;
 }
 
@@ -55,13 +51,13 @@
 
 .main {
   background-color: #ffffff;
-  width: calc(100% - 200px);
+  width: calc(100% - 100px);
 }
 
 .calendar-header {
   background-color: antiquewhite;
   height: 50px;
-  padding: 0 40px;
+  padding: 0 10px 0 25px;
   display: flex;
   justify-content: space-between;
 }
@@ -76,8 +72,8 @@
 }
 
 .header-name {
-  color: #333;
   font-size: 24px;
+  color: black;
   margin-top: 10px;
 }
 
