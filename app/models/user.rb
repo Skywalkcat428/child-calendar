@@ -16,4 +16,5 @@ class User < ApplicationRecord
   # has_many :events
   has_many :room_users
   has_many :chat_rooms, through: :room_users
+  has_many :messages
 end

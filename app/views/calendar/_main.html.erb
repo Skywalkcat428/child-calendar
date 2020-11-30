@@ -1,13 +1,13 @@
 <div class="calendar-header"> <%#chat-header%>
   <div class="left-header">
     <div class="header-name">
-      <%= link_to current_user.name, edit_user_path(current_user) %> さんのカレンダー
+      <%= @calendar_room.child_name %> さんのカレンダー
     </div>
   </div>
   
   <div class="right-header">
     <div class="header-button">
-      <a href="#">チャットルーム</a>
+      <%= link_to "チャットルーム", chat_room_messages_path(char_room) %>
     </div>
     <div class="header-button">
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'%>
@@ -15,6 +15,6 @@
   </div>
 </div>
 
-<div class="event"> <%#messages%>
-  
+<div class="calendar">
+  <%= render partial: 'calendar', collection: @calendars %>
 </div>
