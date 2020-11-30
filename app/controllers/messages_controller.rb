@@ -3,6 +3,7 @@ class MessagesController < ApplicationController
   def index
     @message = Message.new
     @chat_room = ChatRoom.find(params[:chat_room_id])
+    @messages = @chat_room.messages.includes(:user)
   end
 
   def create
@@ -11,6 +12,7 @@ class MessagesController < ApplicationController
     if @message.save
       redirect_to chat_room_messages_path(@chat_room)
     else
+      @messages = @chat_room.messages.includes(:user)
       render :index
     end
   end
