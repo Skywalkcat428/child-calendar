@@ -1,12 +1,12 @@
 class Sex < ActiveHash::Base
   self.data = [
-    { id: 1, name: '--' },
+    { id: 1, name: '性別を選択してください' },
     { id: 2, name: '男の子' },
     { id: 3, name: '女の子' },
     { id: 4, name: 'ヒミツ' },
   ]
 
   include ActiveHash::Associations
-  has_many :user
+  has_many :calendar_room
 
 end

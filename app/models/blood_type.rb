@@ -1,6 +1,6 @@
 class BloodType < ActiveHash::Base
   self.data = [
-    { id: 1, name: '--' },
+    { id: 1, name: '血液型を選択してください' },
     { id: 2, name: 'A型' },
     { id: 3, name: 'B型' },
     { id: 4, name: 'O型' },
@@ -9,6 +9,6 @@ class BloodType < ActiveHash::Base
   ]
   
   include ActiveHash::Associations
-  has_many :user
+  has_many :calendar_room
 
 end

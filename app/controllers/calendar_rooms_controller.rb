@@ -1,5 +1,9 @@
 class CalendarRoomsController < ApplicationController
 
+  def index
+    @calendar_rooms = CalendarRoom.calendar("created_at DESC")
+  end
+
   def new
     @calendar_room = CalendarRoom.new
   end
@@ -16,6 +20,6 @@ class CalendarRoomsController < ApplicationController
   private
 
   def calendar_room_params
-    params.require(:calendar_room).permit(:child_name, :birth_date, :sex, :blood_type, user_ids: [])
+    params.require(:calendar_room).permit(:child_name, :birth_date, :sex_id, :blood_type_id, user_ids: [])
   end
 end

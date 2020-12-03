@@ -15,8 +15,8 @@ ActiveRecord::Schema.define(version: 2020_11_30_080457) do
   create_table "calendar_rooms", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "child_name", null: false
     t.date "birth_date", null: false
-    t.string "sex", null: false
-    t.string "blood_type", null: false
+    t.integer "sex_id", null: false
+    t.integer "blood_type_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
