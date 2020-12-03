@@ -16,6 +16,6 @@ class CalendarRoomsController < ApplicationController
   private
 
   def calendar_room_params
-    params.require(:calendar_room).permit(:child_name, :birth_date, :sex, :blood_type)
+    params.require(:calendar_room).permit(:child_name, :birth_date, :sex, :blood_type, user_ids: [])
   end
 end

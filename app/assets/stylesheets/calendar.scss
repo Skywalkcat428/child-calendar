@@ -14,6 +14,15 @@
   text-decoration: none;
 }
 
+.side-header {
+  height: 50px;
+  padding: 0 20px;
+  background-color: #f7e75c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .children {
   background-color: #fcca41;
   height: calc(100vh - 100px);
@@ -62,15 +71,6 @@
   justify-content: space-between;
 }
 
-.side-header {
-  height: 50px;
-  padding: 0 20px;
-  background-color: #f7e75c;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .header-name {
   font-size: 24px;
   color: black;
@@ -92,7 +92,7 @@
   padding: 10px;
 }
 
-.event {
+.calendar {
   background-color: #FAFAFA;
   height: calc(100vh - 50px);
 }

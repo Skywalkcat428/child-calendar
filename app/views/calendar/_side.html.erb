@@ -6,30 +6,17 @@
 
 
 <div class="children">
-  <div class="child">
-    <div class="child-name">
-      <%= link_to current_user.name, user_path(current_user) %> さんの予定
+  <% current_user.calendar_rooms.each do |calendar| %>
+    <div class="child">
+      <div class="child-name">
+        <%= link_to calendar_room.name, root_path(current_user) %> さん
+      </div>
     </div>
-  </div>
-  <%# current_user.calendar_rooms.each do |calendar| %>
-    <%# <div class="child"> %>
-      <%# <div class="child-name"> %>
-        <%# <a href="#"><%= calendar_room.name</a> %> %>
-      <%# </div> %>
-    <%# </div> %>
-  <%# end %>
+  <% end %>
 </div>
 
 <div class="side-footer">
-  <%# if チャット表示の時 %>
-    <%# <div class="create-calendar"> %>
-      <%#= link_to "チャットを作成する", new_chat_room_path %>
-    <%# </div> %>
-  <%# else %>
-  
     <div class="create-calendar">
       <%= link_to "カレンダーを作成する", new_calendar_room_path %>
     </div>
-  <%# end %>
-
 </div>

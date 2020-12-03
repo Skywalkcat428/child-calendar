@@ -1,5 +1,8 @@
 class ChatRoomsController < ApplicationController
 
+  def index
+  end
+
   def new
     @chat_room = ChatRoom.new
   end

@@ -2,7 +2,8 @@ class CalendarController < ApplicationController
   
   def index
     @calendar = Calendar.new
-    @calendar_room = CalendarRoom.find(params[:calendar_room_id])
+    # @calendar_room = CalendarRoom.find(params[:calendar_room_id])
+    # @calendars = @calendar_room.calendars.includes(:user)
   end
 
   def create
@@ -11,6 +12,7 @@ class CalendarController < ApplicationController
     if @calendar.save
       redirect_to root_path
     else
+      # @calendars = @calendar_room.calendars.includes(:user)
       render :index
     end
   end
