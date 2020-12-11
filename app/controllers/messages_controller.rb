@@ -1,8 +1,14 @@
 class MessagesController < ApplicationController
   
   def index
+    # binding.pry
     @message = Message.new
-    @chat_room = ChatRoom.find(params[:chat_room_id])
+    @chat_room = ChatRoom.new
+    if @chat_room_id == nil
+      redirect_to chat_rooms_path
+    else
+      @chat_room = ChatRoom.find(params[:chat_room_id])
+    end
     @messages = @chat_room.messages.includes(:user)
   end
 
@@ -20,6 +26,6 @@ class MessagesController < ApplicationController
   private
 
   def message_params
-    params.require(:message).permit(:content).merge(user_id: current_user.id)
+    params.require(:message).permit(:content, :image).merge(user_id: current_user.id)
   end
 end

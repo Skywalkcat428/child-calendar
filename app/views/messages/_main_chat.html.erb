@@ -1,12 +1,23 @@
 <div class="chat-header">
-  <div class="left-header">
-    <div class="header-name">
-      <%= @chat_room.name %>
+  <% if  %>
+    <div class="left-header">
+      <div class="chat-header-name">
+        <%= @chat_room.name %>
+      </div>
     </div>
-  </div>
-  
-  <div class="right-header">
-    <div class="header-button">
+
+    <div class="calendar-right-header">
+      <div class="calendar-header-button">
+        <%= link_to "カレンダールーム", root_path %>
+      </div>
+      <div class="calendar-header-button">
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'%>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="chat-right-header">
+    <div class="chat-header-button">
       <%= link_to "チャットを終了する", room_path(@chat_room), method: :delete %>
     </div>
   </div>

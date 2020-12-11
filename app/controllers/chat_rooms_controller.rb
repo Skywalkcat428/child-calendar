@@ -20,4 +20,5 @@ class ChatRoomsController < ApplicationController
 
   def chat_room_params
     params.require(:chat_room).permit(:name, user_ids: [])
+  end
 end
